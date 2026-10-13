@@ -1,0 +1,55 @@
+@use 'variables' as *;
+
+.header {
+  width: 100%;
+  max-width: $content;
+  margin: 0 auto;
+  background: #fff;
+  font-size: 12px;
+
+  &__top {
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 119px;
+    border-bottom: 1px solid $border;
+    color: $gray;
+    font-weight: 500;
+    p { display: flex; align-items: center; gap: 9px; }
+    strong { color: $accent; font-weight: 600; }
+  }
+
+  &__main {
+    position: relative;
+    height: 72px;
+    display: flex;
+    align-items: center;
+  }
+  &__logo { position: absolute; left: 0; top: 15px; }
+  &__search {
+    position: absolute; left: 325px; top: 12px;
+    width: 630px; height: 48px;
+    display: flex; align-items: center;
+    background: #f6f5f2; border-radius: 10px; padding: 0 24px 0 16px;
+    input { flex: 1; background: none; border: 0; outline: 0; font-size: 14px; font-weight: 500; color: $dark;
+      &::placeholder { color: $gray; opacity: 1; } }
+    button { display: flex; }
+  }
+  &__actions {
+    position: absolute; left: 1064px; top: 20px;
+    display: flex; align-items: flex-start; gap: 32px;
+    a { display: block; }
+  }
+
+  &__nav {
+    height: 40px;
+    display: flex; justify-content: center; align-items: center; gap: 91px;
+    border-top: 1px solid $border;
+    background: #fff;
+    box-shadow: 0 8px 16px rgba(57, 48, 19, 0.12);
+    font-weight: 600; text-transform: uppercase; color: $gray;
+    a.is-highlight { color: $accent; }
+  }
+  &__subscription { display: flex; align-items: center; gap: 12px; }
+}

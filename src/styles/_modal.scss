@@ -1,0 +1,22 @@
+@use 'variables' as *;
+
+.modal-overlay { position: fixed; inset: 0; z-index: 100; display: flex; align-items: center; justify-content: center;
+  padding: 16px; background: rgba(0, 0, 0, 0.6); }
+.modal {
+  position: relative; width: 769px; max-width: 100%; height: 299.26px; background: #fff; border-radius: 6px;
+  &__close { position: absolute; top: 17px; right: 28px; color: #6b6b6b; display: flex; }
+  &__image { position: absolute; left: 56px; top: 56.5px; width: 247px; height: 192.2px; object-fit: cover; }
+  &__info { position: absolute; left: 390px; top: 63px; width: 328px; display: flex; flex-direction: column; }
+  &__title { font-size: 20px; font-weight: 400; letter-spacing: 1px; line-height: 1; text-transform: uppercase; color: $dark; }
+  &__price { margin-top: 18px; font-size: 20px; font-weight: 600; letter-spacing: 1px; line-height: 1; color: $dark; }
+  &__description { margin-top: 32px; width: 290px; font-family: $font-work-sans; font-size: 10px; font-weight: 500; letter-spacing: 0.5px;
+    line-height: 1.505; color: $gray; }
+  &__details { margin-top: 18px; font-family: $font-work-sans; font-size: 11px; font-weight: 600; letter-spacing: 0.55px; line-height: 1; color: $blue; }
+  &__actions { margin-top: 32px; display: flex; align-items: center; gap: 12px; }
+  &__qty { width: 110px; height: 36px; display: flex; align-items: center; justify-content: space-between; padding: 0 9.3px;
+    background: #fff; border: 1px solid #d9d9d9; border-radius: 4px;
+    output { font-size: 16px; font-weight: 500; color: $violet; line-height: 16px; }
+    button { display: flex; align-items: center; justify-content: center; width: 20.3px; height: 19.6px; }
+    img { width: 100%; height: 100%; } }
+  &__buy { width: 188px; height: 36px; background: $yellow; color: $violet; border-radius: 6px; font-size: 14px; font-weight: 700; text-transform: uppercase; }
+}
